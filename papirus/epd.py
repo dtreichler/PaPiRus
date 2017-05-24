@@ -198,6 +198,6 @@ to use:
     def _command(self, c):
         if self._uselm75b:
             with open(os.path.join(self._epd_path, 'temperature'), 'wb') as f:
-                f.write(repr(self._lm75b.getTempC()))
+                f.write(bytes(repr(self._lm75b.getTempC()),'UTF-8'))
         with open(os.path.join(self._epd_path, 'command'), 'wb') as f:
-            f.write(c)
+            f.write(bytes(c,'UTF-8'))

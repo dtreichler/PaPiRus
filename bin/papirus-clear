@@ -7,7 +7,7 @@ from papirus import Papirus
 # Check EPD_SIZE is defined
 EPD_SIZE=0.0
 if os.path.exists('/etc/default/epd-fuse'):
-    execfile('/etc/default/epd-fuse')
+    exec(compile(open('/etc/default/epd-fuse').read(), '/etc/default/epd-fuse', 'exec'))
 if EPD_SIZE == 0.0:
     print("Please select your screen size by running 'papirus-config'.")
     sys.exit()
