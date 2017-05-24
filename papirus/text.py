@@ -28,7 +28,7 @@ class PapirusText():
 
         current_line = 0
         # unicode by default
-        text_lines = [u""]
+        text_lines = [""]
 
         # Compute each line
         for word in text.split():
